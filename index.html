@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+      rel="stylesheet">
+    <title>WhatsApp Redirector</title>
+</head>
+<body>
+    <h1>WhatsApp Redirector</h1>
+    <div class="box">
+        <img src="img/logo.png" alt="WhatsApp logo" width="180vh">
+        <h2>Enter Whatsapp Number</h2>
+        <input type="number" id="num">
+        <br>
+        <button onclick="chat()">Chat</button>
+
+    </div>
+    <script>
+        function chat(){
+            let n=String(document.getElementById("num").value);
+            if(n.length==10){
+                window.location.href="https://wa.me/91"+n;
+            }
+            else{
+                alert("Number should be of 10 digits \n Your Number has "+n.length+" digits.");
+            }
+        }
+    </script>
+    
+</body>
+</html>
